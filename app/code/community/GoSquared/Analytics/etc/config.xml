@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <config>
 	<modules>
-		<Gosquared_Livestats>
-			<version>0.1.7</version>
-		</Gosquared_Livestats>
+		<GoSquared_Analytics>
+			<version>0.1.8</version>
+		</GoSquared_Analytics>
 	</modules>
 	<global>
 		<blocks>
-			<livestats>
-				<class>Gosquared_Livestats_Block</class>
-			</livestats>
+			<analytics>
+				<class>GoSquared_Analytics_Block</class>
+			</analytics>
 		</blocks>
 		<models>
-			<livestats>
-				<class>Gosquared_Livestats_Model</class>
-			</livestats>
+			<analytics>
+				<class>GoSquared_Analytics_Model</class>
+			</analytics>
 		</models>
 		<helpers>
-            <livestats>
-                <class>Gosquared_Livestats_Helper</class>
-            </livestats>
+            <analytics>
+                <class>GoSquared_Analytics_Helper</class>
+            </analytics>
         </helpers>
 	</global>
 	
@@ -28,7 +28,7 @@
              <adminhtml>
                  <args>
                      <modules>
-                         <gosquared_livestats before="Mage_Adminhtml">Gosquared_Livestats_Adminhtml</gosquared_livestats>
+                         <gosquared_analytics before="Mage_Adminhtml">GoSquared_Analytics_Adminhtml</gosquared_analytics>
                      </modules>
                  </args>
              </adminhtml>
@@ -43,9 +43,9 @@
                             <children>
                                 <config>
                                     <children>
-                                        <livestats>
-                                            <title>Livestats</title>
-                                        </livestats>
+                                        <analytics>
+                                            <title>Analytics</title>
+                                        </analytics>
                                     </children>
                                 </config>
                             </children>
@@ -56,9 +56,9 @@
         </acl>
 		<layout>
 			<updates>
-				<livestats>
-					<file>livestats.xml</file>
-				</livestats>
+				<analytics>
+					<file>analytics.xml</file>
+				</analytics>
 			</updates>
 		</layout>
 	</adminhtml>
@@ -66,20 +66,20 @@
 	<frontend>
 		<layout>
 			<updates>
-				<livestats>
-					<file>livestats.xml</file>
-				</livestats>
+				<analytics>
+					<file>analytics.xml</file>
+				</analytics>
 			</updates>
 		</layout>
 	</frontend>
 	
 	<default>
-		<livestats>
+		<analytics>
 			<settings>
 				<acctcode>GSN-000000-X</acctcode>
 				<userdisplay>2</userdisplay>
 				<admintrack>1</admintrack>
 			</settings>
-		</livestats>
+		</analytics>
 	</default>
 </config>

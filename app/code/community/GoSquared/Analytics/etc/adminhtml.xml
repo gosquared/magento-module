@@ -11,17 +11,17 @@
 						<children>
 							<config>
 								<children>
-									<livestats translate="title" module="livestats">
-										<title>GoSquared LiveStats</title>
-									</livestats>
+									<analytics translate="title" module="analytics">
+										<title>GoSquared Analytics</title>
+									</analytics>
 								</children>
 							</config>
 						</children>
 					</system>
-					<livestats translate="title" module="livestats">
-						<title>LiveStats Settings</title>
+					<analytics translate="title" module="analytics">
+						<title>Analytics Settings</title>
 						<sort_order>100</sort_order>
-					</livestats>
+					</analytics>
 				</children>
 			</admin>
 		</resources>

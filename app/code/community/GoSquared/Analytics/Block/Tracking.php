@@ -1,13 +1,16 @@
 <?php
-class Gosquared_Livestats_Block_Tracking extends Mage_Core_Block_Template {
-	public function getTrackingCode() {
+class GoSquared_Analytics_Block_Tracking extends Mage_Core_Block_Template {
+	public function getTrackingCode($isAdminPage=false) {
 		//Get params
-		$acct = Mage::getStoreConfig('livestats/settings/acctcode');
-		$name = Mage::getStoreConfig('livestats/settings/userdisplay');
-		$admintrack = Mage::getStoreConfig('livestats/settings/admintrack');
+		$acct = Mage::getStoreConfig('analytics/settings/acctcode');
+		$name = Mage::getStoreConfig('analytics/settings/userdisplay');
+		$admintrack = Mage::getStoreConfig('analytics/settings/admintrack');
 		
 		//First of all check if the acct code is valid.
-		if($acct !='' && $acct != 'GSN-000000-X' && preg_match('/GSN-[0-9]{6,7}-[A-Z]{1}/', $acct) && $admintrack) {
+		if($acct !='' && $acct != 'GSN-000000-X' && preg_match('/GSN-[0-9]{6,7}-[A-Z]{1}/', $acct)) {
+			if ($isAdminPage && !$admintrack) {
+				return;
+			}
 			//acct code is valid so continue
 
 			//If the user is not a guest then find their username
@@ -54,7 +57,7 @@ class Gosquared_Livestats_Block_Tracking extends Mage_Core_Block_Template {
 			//Set the initial JS
 			$GSJavascript = '
 
-		<!--LiveStats Magento Plugin-->
+		<!--GoSquared Magento Plugin-->
 		<script type="text/javascript">
 					var GoSquared={};
 					GoSquared.acct = "' . $acct . '";
@@ -73,19 +76,10 @@ class Gosquared_Livestats_Block_Tracking extends Mage_Core_Block_Template {
 				    w.addEventListener?w.addEventListener("load",gs,false):w.attachEvent("onload",gs);
 				})(window);
 		</script>
-		<!--End LiveStats Magento Plugin-->
+		<!--End GoSquared Magento Plugin-->
 
 		';
 			return $GSJavascript;
 		}
 	}
-	
-	/*protected function _toHtml() {
-		$returnedJS = $this->_getTrackingCode();
-		if ($returnedJS) {
-			return $returnedJS;
-		} else {
-			return '';
-		}
-	}*/
 }

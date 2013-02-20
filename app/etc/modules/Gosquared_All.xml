@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
 	<modules>
-		<Gosquared_Livestats>
+		<GoSquared_Analytics>
 			<active>true</active>
 			<codePool>community</codePool>
-		</Gosquared_Livestats>
+		</GoSquared_Analytics>
 	</modules>
 </config>

@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <config>
 	<tabs>
-		<gosquared translate="label" module="livestats">
+		<gosquared translate="label" module="analytics">
 			<label>GoSquared</label>
 			<sort_order>310</sort_order>
 		</gosquared>
 	</tabs>
 	<sections>
-		<livestats translate="label" module="livestats">
+		<analytics translate="label" module="analytics">
 			<tab>gosquared</tab>
 			<label>Settings</label>
 			<sort_order>100</sort_order>
@@ -35,7 +35,7 @@
 						<userdisplay translate="label">
 							<label>Display users as</label>
 							<frontend_type>radios</frontend_type>
-							<source_model>Gosquared_Livestats_Model_Adminhtml_System_Source_Username</source_model>
+							<source_model>GoSquared_Analytics_Model_Adminhtml_System_Source_Username</source_model>
 							<sort_order>15</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -45,7 +45,7 @@
 						<admintrack>
 							<label>Track admin pages</label>
 							<frontend_type>radios</frontend_type>
-							<source_model>Gosquared_Livestats_Model_Adminhtml_System_Source_Track</source_model>
+							<source_model>GoSquared_Analytics_Model_Adminhtml_System_Source_Track</source_model>
 							<sort_order>20</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -55,6 +55,6 @@
 					</fields>
 				</settings>
 			</groups>
-		</livestats>
+		</analytics>
 	</sections>
 </config>

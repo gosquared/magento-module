@@ -1,5 +1,5 @@
 <?php
-class Gosquared_Livestats_Model_Adminhtml_System_Source_Username {
+class GoSquared_Analytics_Model_Adminhtml_System_Source_Username {
     public function toOptionArray() {
         return array(
             array('value'=>0, 'label'=>' Off'),

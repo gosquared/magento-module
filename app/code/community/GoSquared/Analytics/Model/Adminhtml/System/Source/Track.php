@@ -1,5 +1,5 @@
 <?php
-class Gosquared_Livestats_Model_Adminhtml_System_Source_Track {
+class GoSquared_Analytics_Model_Adminhtml_System_Source_Track {
     public function toOptionArray() {
         return array(
             array('value'=>1, 'label'=>' Track'),
