@@ -1,10 +1,17 @@
+**This module is no longer actively maintained or supported by the GoSquared team. It has been deprecated. Feel free to fork it or extend it as you wish but all official support has been dropped.**
+
+If you're looking for easy GoSquared/Magento support I'd recommend using the Segment plugin. Read the full [support guide here](https://www.gosquared.com/customer/en/portal/articles/2162189-magento)
+
+
+The following instructions are here for reference but are no longer relevant.
+
 GoSquared for Magento
 =====================
 
 How to Install
 --------------
 
-The easiest way to install the extension is to head over to Magento Connect and get the Extension key to put straight into your Connect Manager of your Magento install. The latest version of the extension on Magento Connect can be found [here](http://www.magentocommerce.com/magento-connect/gosquared-real-time-analytics.html).
+The easiest way to install the extension is to head over to Magento Connect and get the Extension key to put straight into your Connect Manager of your Magento install.
 
 How to Setup
 ------------
